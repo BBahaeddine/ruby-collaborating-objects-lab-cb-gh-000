@@ -19,10 +19,11 @@ class Artist
   def self.find_or_create_by_name(name)
     if @@all.any?{|item| item.name == name}
       # binding.pry
-      return @@all.select{|item| item.name == name}.first
+      @@all.select{|item| item.name == name}.first
     else
       artist = self.new(name)
       artist.save
+      artist
     end
   end
   

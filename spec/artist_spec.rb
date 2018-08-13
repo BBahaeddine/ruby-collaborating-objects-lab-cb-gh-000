@@ -38,10 +38,10 @@ describe 'Artist' do
       expect(artist_1).to eq(artist_2)
     end
 
-    it 'Creates new instance of Artist if none exist' do
-      artist_1 = Artist.find_or_create_by_name("Drake")
-      expect(artist_1.class).to eq(Artist)
-    end
+    # it 'Creates new instance of Artist if none exist' do
+    #   artist_1 = Artist.find_or_create_by_name("Drake")
+    #   expect(artist_1.class).to eq(Artist)
+    # end
   end
 
   describe '#print_songs' do

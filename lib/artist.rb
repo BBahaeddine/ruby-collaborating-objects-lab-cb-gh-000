@@ -22,8 +22,9 @@ class Artist
       # return @@all.select{|item| item.name == name}.first
       self.all.find {|artist| artist.name == name }
     else
-      artist = self.new(name)
-      artist.save
+      # artist = self.new(name)
+      # artist.save
+      self.new(name).tap {|artist| artist.save}
     end
   end
   
